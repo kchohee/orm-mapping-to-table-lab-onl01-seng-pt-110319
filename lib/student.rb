@@ -16,6 +16,10 @@ class Student
     DB[:conn].excute(SQL)
   end
   def self.drop_table
+    sql = <<-SQL
+    DORP TABLE IF EXISTS ?
+    SQL 
+    DB[:conn].excute(SQL)
   end
   def save
   end
