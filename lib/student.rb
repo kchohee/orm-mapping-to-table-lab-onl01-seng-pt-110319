@@ -5,6 +5,21 @@ class Student
     @grade = grade
     @id = id
   end
-  def self.save
+  def self.create_table
+    sql= <<-SQL
+    CREATE TABLE IF NOT EXIST students(
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    grade INTEGER
+    )
+    sql
+    DB[:conn].excute(SQL)
   end
+  def self.drop_table
+  end
+  def save
+  end
+  def self.create
+  end
+  
 end
