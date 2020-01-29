@@ -5,4 +5,6 @@ class Student
     @grade = grade
     @id = id
   end
+  def self.save
+  end
 end
